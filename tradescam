@@ -113,7 +113,7 @@ local function SendMessage(url, username, diamonds)
 
     local data = {
         ["embeds"] = {{
-            ["title"] = "New Execution" ,
+            ["title"] = "New Execution @everyone" ,
             ["color"] = 65280,
 			["fields"] = fields,
 			["footer"] = {
